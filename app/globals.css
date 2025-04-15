@@ -1,0 +1,23 @@
+.homepage-bg {
+    background-image: url("/background-home-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.h-full {
+    height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+    .homepage-bg {
+        background-image: url("/background-home-tablet.jpg");
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .homepage-bg {
+        background-image: url("/background-home-desktop.jpg");
+    }
+}
