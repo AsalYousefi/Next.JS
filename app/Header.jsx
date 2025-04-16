@@ -4,9 +4,9 @@ import BurgerMenu from "./BurgerMenu";
 
 export default function Header() {
   return (
-    <header className="p-3 d-flex align-items-center justify-content-between">
+    <header className="position-relative p-3 w-100 d-flex align-items-center justify-content-between">
       <Link href="/">
-        <Image src="/Subtract.svg" alt="logo" width={50} height={50} />
+        <Image src="/Subtract.svg" priority alt="logo" width={50} height={50} />
       </Link>
       <BurgerMenu />
     </header>

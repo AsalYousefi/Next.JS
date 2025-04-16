@@ -1,3 +1,7 @@
+body {
+    color: white !important;
+}
+
 .homepage-bg {
     background-image: url("/background-home-mobile.jpg");
     background-repeat: no-repeat;
@@ -16,8 +20,31 @@
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
     .homepage-bg {
         background-image: url("/background-home-desktop.jpg");
     }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.menu {
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    width: 60%;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu .active {
+    border-right: 4px solid white;
 }
