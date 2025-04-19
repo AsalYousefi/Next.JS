@@ -15,7 +15,7 @@ export default function Header() {
   ]);
 
   return (
-    <header className="header position-relative py-xl-4 w-100 d-flex align-items-center justify-content-between">
+    <header className="header position-relative pt-xl-4 w-100 d-flex align-items-center justify-content-between">
       <Link href="/" className="m-5">
         <Image src="/Subtract.svg" priority alt="logo" width={40} height={40} />
       </Link>
