@@ -1,5 +1,14 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     color: white !important;
+}
+
+.header {
+    height: 96px;
 }
 
 .homepage-bg {
@@ -14,9 +23,15 @@ body {
     height: 100vh;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
     .homepage-bg {
         background-image: url("/background-home-tablet.jpg");
+    }
+    nav {
+        width: 83% !important;
+    }
+    nav li {
+        padding-top: 2.2rem;
     }
 }
 
@@ -24,14 +39,18 @@ body {
     .homepage-bg {
         background-image: url("/background-home-desktop.jpg");
     }
+    nav {
+        width: 50% !important;
+    }
 }
 
 .pointer {
     cursor: pointer;
 }
 
-.menu {
-    background: rgba(255, 255, 255, .1);
+.menu,
+nav {
+    background: rgba(11, 13, 23, .15);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     width: 60%;
@@ -47,4 +66,20 @@ ul {
 
 .menu .active {
     border-right: 4px solid white;
+}
+
+nav .active {
+    border-bottom: 4px solid white;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.line {
+    height: 1px;
+    background-color: #979797;
+    z-index: 10;
+    left: 10%;
+    width: 41%;
 }

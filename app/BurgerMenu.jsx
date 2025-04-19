@@ -4,17 +4,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function BurgerMenu() {
-  const [navItems, setNavItems] = useState([
-    { id: 1, title: "home", isActive: true },
-    { id: 2, title: "destination", isActive: false },
-    { id: 3, title: "crew", isActive: false },
-    { id: 4, title: "technology", isActive: false },
-  ]);
 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="d-md-non">
+    <div className="d-md-none">
       <div className="pointer text-end" onClick={() => setIsOpen((prev) => !prev)}>
         <Image src="/icon-hamburger.svg" width={30} height={30} priority alt="menu-icon" />
       </div>
@@ -25,11 +19,11 @@ export default function BurgerMenu() {
           </div>
           <div className="w-100">
             <ul className="d-flex flex-column w-100">
-              {navItems.map((item) => {
+              {props.navItems.map((item, index) => {
                 return (
-                  <li key={item.id} className={`w-100 py-1 my-3 ${item.isActive && "active"}`}>
+                  <li key={index} className={`w-100 py-1 my-3 ${item.isActive && "active"}`}>
                     <Link href={`/${item.title}`} className="text-uppercase text-white fw-light">
-                      <span className="fw-bold me-3">{`0${item.id}`}</span>
+                      <span className="fw-bold me-3">{`0${index}`}</span>
                       {item.title}
                     </Link>
                   </li>
