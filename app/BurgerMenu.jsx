@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function BurgerMenu() {
+export default function BurgerMenu(props) {
 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="d-md-none">
-      <div className="pointer text-end" onClick={() => setIsOpen((prev) => !prev)}>
+      <div className="pointer text-end mx-4" onClick={() => setIsOpen((prev) => !prev)}>
         <Image src="/icon-hamburger.svg" width={30} height={30} priority alt="menu-icon" />
       </div>
       {isOpen && (

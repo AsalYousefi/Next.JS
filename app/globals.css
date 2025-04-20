@@ -11,7 +11,7 @@ body {
     height: 96px;
 }
 
-.homepage-bg {
+.homepage {
     background-image: url("/background-home-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center center;
@@ -24,23 +24,34 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-    .homepage-bg {
+    .homepage {
         background-image: url("/background-home-tablet.jpg");
     }
     nav {
         width: 83% !important;
     }
     nav li {
-        padding-top: 2.2rem;
+        padding-top: 2.2rem !important;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .homepage-bg {
-        background-image: url("/background-home-desktop.jpg");
+    .homepage {
+        background-image: url("/background-home-desktop.jpg") !important;
     }
     nav {
         width: 50% !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .explore {
+        width: 200px !important;
+        height: 200px !important;
+        font-size: 25px !important;
+    }
+    .homepage-text {
+        width: 45% !important;
     }
 }
 
@@ -86,4 +97,37 @@ nav li {
     z-index: 10;
     left: 10%;
     width: 41%;
+}
+
+.homepage h1 {
+    font-size: 7rem;
+}
+
+.text-blue {
+    color: #D0D6F9;
+}
+
+.description {
+    font-size: 13.5px;
+}
+
+.text-fs {
+    font-size: 18px;
+}
+
+.explore {
+    width: 144px;
+    height: 144px;
+    font-size: 20px;
+    color: #0B0D17;
+    transition: .5 ease-in-out;
+}
+
+.explore:hover {
+    color: var(--bs-secondary);
+    box-shadow: 0 0 0 5rem rgba(255, 255, 255, 0.1);
+}
+
+.width-100 {
+    width: 100%;
 }
