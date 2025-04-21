@@ -21,7 +21,7 @@ export default function BurgerMenu(props) {
             <ul className="d-flex flex-column w-100">
               {props.navItems.map((item, index) => {
                 return (
-                  <li key={index} className={`w-100 py-1 my-3 ${item.isActive && "active"}`}>
+                  <li key={index} className={`menu-item w-100 py-1 my-3 ${item.isActive ? "active" : "hover"}`}>
                     <Link href={`/${item.title}`} className="text-uppercase text-white fw-light">
                       <span className="fw-bold me-3">{`0${index}`}</span>
                       {item.title}

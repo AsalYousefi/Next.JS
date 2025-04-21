@@ -8,7 +8,7 @@ export default function Navbar(props) {
           return (
             <li
               key={index}
-              className={`h-100 pt-xl-4 ${item.isActive && "active"}`}
+              className={`navbar-item h-100 pt-xl-4 ${item.isActive ? "active" : "hover"}`}
             >
               <Link
                 href={`/${item.title}`}

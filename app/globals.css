@@ -131,3 +131,15 @@ nav li {
 .width-100 {
     width: 100%;
 }
+
+.hover {
+    transition: .5s ease-in-out;
+}
+
+.menu-item:hover {
+    border-right: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar-item:hover {
+    border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+}
